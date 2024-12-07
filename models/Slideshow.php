@@ -6,7 +6,8 @@ use Model;
 
 class Slideshow extends Model
 {
-
+    use \October\Rain\Database\Traits\Multisite;
+    
     /**
      * @var string The database table used by the model.
      */
@@ -30,14 +31,24 @@ class Slideshow extends Model
     public $translatable = [
         'name'
     ];
+    
+    public $hasOne = [
+        'landingpage' => ['Identum\LandingPages\Models\LandingPages', 'key' => 'slideshow_id']
+    ];
 
     public $hasMany = [
         'slides' => [
             'Flosch\Slideshow\Models\Slide'
+        ],
+        'publishedSlides' => [
+            'Flosch\Slideshow\Models\Slide',
+            'scope' => 'published'
         ],
         'slides_count' => [
             'Flosch\Slideshow\Models\Slide',
             'count' => true
         ]
     ];
+    
+    protected $propagatable = [];
 }
