@@ -19,3 +19,6 @@
     - 'Add german translation (thanks to @danielbruni)'
 1.0.8:
     - 'Correct columns definition (thanks to @Jeime)'
+1.0.9:
+    - 'Added multisite functionality to slideshows.'
+    - add_multisite_fields_to_slideshows_table.php
