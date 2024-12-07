@@ -24,7 +24,17 @@ fields:
     description:
         label: flosch.slideshow::lang.fields.slide.description
         type: richeditor
-    image:
+    slide_image:
         label: flosch.slideshow::lang.fields.slide.image
-        type: fileupload
         mode: image
+        span: auto
+        required: 1
+        type: mediafinder
+    slide_image_caption:
+        label: flosch.slideshow::lang.fields.slide.image_caption
+        span: auto
+    sort_order:
+        label: flosch.slideshow::lang.fields.slide.sort_order
+        span: auto
+        default: '0'
+        type: number
