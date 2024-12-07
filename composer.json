@@ -1,0 +1,11 @@
+{
+    "name": "flosch/slideshow-plugin",
+    "type": "october-plugin",
+    "description": "Manage Twitter Bootstrap carousels with additional content.",
+    "homepage": "https://octobercms.com/plugin/flosch-slideshow",
+    "keywords": ["october", "octobercms", "slideshow"],
+    "license": "MIT",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

@@ -4,3 +4,6 @@
 
 # User-specific stuff:
 .idea/
+/.buildpath
+/.project
+/.settings/
