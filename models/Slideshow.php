@@ -3,6 +3,7 @@
 namespace Flosch\Slideshow\Models;
 
 use Model;
+use Seimaldigital\Landingpage\Models\Landingpages;
 
 class Slideshow extends Model
 {
@@ -33,7 +34,7 @@ class Slideshow extends Model
     ];
     
     public $hasOne = [
-        'landingpage' => ['Identum\LandingPages\Models\LandingPages', 'key' => 'slideshow_id']
+        'landingpage' => [Landingpages::class, 'key' => 'slideshow_id']
     ];
 
     public $hasMany = [
@@ -49,6 +50,10 @@ class Slideshow extends Model
             'count' => true
         ]
     ];
+    
+    public function scopeDisableGlobalScopes($query) {
+        return $query->withoutGlobalScopes();
+    }
     
     protected $propagatable = [];
 }
